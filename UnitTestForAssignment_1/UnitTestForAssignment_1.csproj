@@ -52,12 +52,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTestForFightMethod.cs" />
-    <Compile Include="UnitTestForShowMethod.cs" />
-    <Compile Include="UnitTestFor_generateAbilitiesMethod.cs" />
+    <Compile Include="UnitTestForHeroClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTestFor_hitAttemptMethod.cs" />
-    <Compile Include="UnitTestFor_hitDamageMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Assignment_1\Assignment_1.csproj">

@@ -12,10 +12,10 @@ namespace Assignment_1
      * 
      * @class Hero
      */
-    class Hero
+    public class Hero
     {
         //RANDOM NUMBER GENERATOR=========================================================
-        Random random = new Random();
+        Random random = new Random(Guid.NewGuid().GetHashCode());
         // PRIVATE INSTANCE VARIABLES=====================================================
         private string _name;
         private int _strength;
@@ -54,8 +54,23 @@ namespace Assignment_1
             _generateAbilities();
             
         }
+
+        /**
+         * <summary>
+         * This is a consructor that takes name as a parameter and passes 
+         * it to the _name private instance variable
+         * </summary>
+         * 
+         * @constructor Hero
+         * @param {string} name
+         */
+        public Hero(string name)
+        {
+            this.Name = name;
+            _generateAbilities();
+        }
         // PRIVATE METHODS===================================================================
-        
+
         /**
          * <summary>
          * This Method generate hero's strength, speed and health between 1 and 100 using a random number generator.
@@ -66,10 +81,10 @@ namespace Assignment_1
          */
         private void _generateAbilities()
         {
-
             _strength = random.Next(1,100);
             _speed = random.Next(1,100);
-            _health = random.Next(1,100);     
+            _health = random.Next(1,100);  
+               
         }
 
         /**
@@ -125,11 +140,11 @@ namespace Assignment_1
                 (hit == true)
             {
                 
-                Console.WriteLine(this.Name+" Deals "+_hitDamage()+" Damage");
+                Console.WriteLine("\n"+this.Name+" Deals "+_hitDamage()+" Damage to target enemy.");
             }
             else
             {
-                Console.WriteLine(this.Name+" Missed");
+                Console.WriteLine("\n"+this.Name+" Missed");
             }
         }
 
@@ -143,7 +158,7 @@ namespace Assignment_1
         */
         public void Show()
         {
-            Console.WriteLine(this.Name+" Strength = "+_strength+" Speed = "+_speed+" Health = "+_health);
+            Console.WriteLine("*****************\nHero : "+this.Name+"     \n*Strength : "+_strength+ "   \n*Speed : " + _speed+ "   \nHealth : " + _health+ "   \n*****************");
         }
     }
 }

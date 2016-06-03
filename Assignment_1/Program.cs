@@ -8,12 +8,8 @@ using System.Threading.Tasks;
  * Date : June 2th, 2016
  * Date Modified: Jun 3th, 2016
  * Description : Assignment 1
- * Version : 0.0.6 - Added Unit Test for : 
-                                        _generateAbilities Method;
-                                        _hitAttempt Method;
-                                        _hitDamage Method;
-                                        Fight Method;
-                                        Show Method;
+ * Version : 0.0.7 - Fixed the random number generator to generate different number each time.
+ *                   Added an overload constructor.
  */
 namespace Assignment_1
 {
@@ -22,7 +18,7 @@ namespace Assignment_1
      * 
      * @class program
      */
-    class Program
+    public class Program
     {
         /**
          * the main method for my driver class
@@ -36,8 +32,12 @@ namespace Assignment_1
             Slasher.Name = "Slasher";
             Slasher.Show();
             Slasher.Fight();
-            
-            
+
+            Console.WriteLine();
+
+            Hero Cybermancer = new Hero("Cybermancer");
+            Cybermancer.Show();
+            Cybermancer.Fight();
 
         }
     }
