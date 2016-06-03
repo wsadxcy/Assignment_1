@@ -8,8 +8,7 @@ using System.Threading.Tasks;
  * Date : June 2th, 2016
  * Date Modified: Jun 3th, 2016
  * Description : Assignment 1
- * Version : 0.0.7 - Fixed the random number generator to generate different number each time.
- *                   Added an overload constructor.
+ * Version : 0.1.0 - Finished without unit test.
  */
 namespace Assignment_1
 {
@@ -38,6 +37,20 @@ namespace Assignment_1
             Hero Cybermancer = new Hero("Cybermancer");
             Cybermancer.Show();
             Cybermancer.Fight();
+
+            Console.WriteLine();
+
+            Hero Nihil = new Hero("Nihil");
+            Nihil.Show();
+            Nihil.Fight();
+
+            Console.WriteLine();
+
+            Hero Elementalist = new Hero();
+            Elementalist.Name = "Elementalist";
+            Elementalist.Show();
+            Elementalist.Fight();
+
 
         }
     }
