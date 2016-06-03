@@ -7,7 +7,17 @@ using System.Threading.Tasks;
 /* Author : Chenyuan Xie
  * Date : June 2th, 2016
  * Description : Assignment 1
- * Version : 0.0.2 - Added version description
+ * Version : 0.0.3 - Added PRIVATE INSTANCE VARIABLES string _name;
+                     Added PRIVATE INSTANCE VARIABLES int _strength;
+                     Added PRIVATE INSTANCE VARIABLES int _speed;
+                     Added PRIVATE INSTANCE VARIABLES int _health;
+                     Added PRIVATE METHOD _generateAbilities;
+                     Added PRIVATE METHOD _hitAttempt;
+                     Added PRIVATE METHOD _hitDamage;
+                     Added PUBLIC PROPERTIES Name;
+                     Added PUBLIC METHODS Fight;
+                     Added PUBLIC METHODS Show;
+
  */
 namespace Assignment_1
 {
@@ -26,6 +36,10 @@ namespace Assignment_1
          */
         static void Main(string[] args)
         {
+            Hero Slasher = new Hero();
+            Slasher.Name = "Slasher";
+            
+
         }
     }
 }
