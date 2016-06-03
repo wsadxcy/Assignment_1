@@ -14,6 +14,8 @@ namespace Assignment_1
      */
     class Hero
     {
+        //RANDOM NUMBER GENERATOR=========================================================
+        Random random = new Random();
         // PRIVATE INSTANCE VARIABLES=====================================================
         private string _name;
         private int _strength;
@@ -46,7 +48,7 @@ namespace Assignment_1
          * 
          * @constructor Hero
          */
-         public Hero()
+        public Hero()
         {
             this.Name = "Unknown Name";
             _generateAbilities();
@@ -55,8 +57,7 @@ namespace Assignment_1
         // PRIVATE METHODS===================================================================
         private void _generateAbilities()
         {
-            Random random = new Random();
-           
+
             _strength = random.Next(1,100);
             _speed = random.Next(1,100);
             _health = random.Next(1,100);
@@ -67,7 +68,6 @@ namespace Assignment_1
         private bool _hitAttempt()
         {
             bool hit = false;
-            Random random = new Random();
             int HitAtp = random.Next(4);
             
             if(HitAtp == 0)
@@ -81,10 +81,9 @@ namespace Assignment_1
 
         private int _hitDamage()
         {
-            Random random = new Random();
-            int DamMult = random.Next(1, 6);
+            int DamMult = random.Next(1,6);
             
-            int FinDam = DamMult * _strength;
+            int FinDam = _strength * DamMult;
             return FinDam;
         }
 
@@ -96,13 +95,13 @@ namespace Assignment_1
                 (hit == true)
             {
                 
-                Console.WriteLine("Deals"+_hitDamage()+"Damage");
+                Console.WriteLine(this.Name+" Deals "+_hitDamage()+" Damage");
             }
             
         }
         public void Show()
         {
-            Console.WriteLine(this.Name+"Strength = "+_strength+"Speed = "+_speed+"Health = "+_health);
+            Console.WriteLine(this.Name+" Strength = "+_strength+" Speed = "+_speed+" Health = "+_health);
         }
     }
 }

@@ -8,17 +8,7 @@ using System.Threading.Tasks;
  * Date : June 2th, 2016
  * Date Modified: Jun 3th, 2016
  * Description : Assignment 1
- * Version : 0.0.3 - Added PRIVATE INSTANCE VARIABLES string _name;
-                     Added PRIVATE INSTANCE VARIABLES int _strength;
-                     Added PRIVATE INSTANCE VARIABLES int _speed;
-                     Added PRIVATE INSTANCE VARIABLES int _health;
-                     Added PRIVATE METHOD _generateAbilities;
-                     Added PRIVATE METHOD _hitAttempt;
-                     Added PRIVATE METHOD _hitDamage;
-                     Added PUBLIC PROPERTIES Name;
-                     Added PUBLIC METHODS Fight;
-                     Added PUBLIC METHODS Show;
-
+ * Version : 0.0.3 - All methods initially finished.
  */
 namespace Assignment_1
 {
