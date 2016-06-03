@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 /* Author : Chenyuan Xie
  * Date : June 2th, 2016
+ * Date Modified: Jun 3th, 2016
  * Description : Assignment 1
  * Version : 0.0.3 - Added PRIVATE INSTANCE VARIABLES string _name;
                      Added PRIVATE INSTANCE VARIABLES int _strength;
@@ -38,6 +39,9 @@ namespace Assignment_1
         {
             Hero Slasher = new Hero();
             Slasher.Name = "Slasher";
+            Slasher.Show();
+            Slasher.Fight();
+            
             
 
         }

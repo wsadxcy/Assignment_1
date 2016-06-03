@@ -37,11 +37,31 @@ namespace Assignment_1
                 this._name = value;
             }
         }
+        // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        /**
+         * <summary>
+         * This is the default empty constructor for the Hero class
+         * </summary>
+         * 
+         * @constructor Hero
+         */
+         public Hero()
+        {
+            this.Name = "Unknown Name";
+            _generateAbilities();
+            
+        }  
         // PRIVATE METHODS===================================================================
         private void _generateAbilities()
         {
             Random random = new Random();
-            int ability = random.Next(100);
+           
+            _strength = random.Next(1,100);
+            _speed = random.Next(1,100);
+            _health = random.Next(1,100);
+
+            
         }
 
         private bool _hitAttempt()
@@ -49,12 +69,13 @@ namespace Assignment_1
             bool hit = false;
             Random random = new Random();
             int HitAtp = random.Next(4);
-            Console.Write(HitAtp);
+            
             if(HitAtp == 0)
             {
                 hit = true;
             }
             return hit;
+
 
         }
 
@@ -62,18 +83,26 @@ namespace Assignment_1
         {
             Random random = new Random();
             int DamMult = random.Next(1, 6);
-            Console.Write(DamMult);
-            return DamMult;
+            
+            int FinDam = DamMult * _strength;
+            return FinDam;
         }
 
         //PUBLIC METHODS====================================================================
         public void Fight()
         {
-
+            bool hit = _hitAttempt();
+            if
+                (hit == true)
+            {
+                
+                Console.WriteLine("Deals"+_hitDamage()+"Damage");
+            }
+            
         }
         public void Show()
         {
-
+            Console.WriteLine(this.Name+"Strength = "+_strength+"Speed = "+_speed+"Health = "+_health);
         }
     }
 }
