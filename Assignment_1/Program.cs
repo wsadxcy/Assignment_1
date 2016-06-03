@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  * Date : June 2th, 2016
  * Date Modified: Jun 3th, 2016
  * Description : Assignment 1
- * Version : 0.0.4 - All methods initially finished.
+ * Version : 0.0.5 - Added Documentation for everything.
  */
 namespace Assignment_1
 {

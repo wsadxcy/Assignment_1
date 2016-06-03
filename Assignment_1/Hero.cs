@@ -24,7 +24,7 @@ namespace Assignment_1
 
         // PUBLIC PROPERTIES==============================================================
         /**
-         * This is a public property for private _name field
+         * This is the public property for private _name field
          * 
          * @property {string} Name
          */
@@ -39,7 +39,7 @@ namespace Assignment_1
                 this._name = value;
             }
         }
-        // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // CONSTRUCTORS =====================================================================
 
         /**
          * <summary>
@@ -53,18 +53,33 @@ namespace Assignment_1
             this.Name = "Unknown Name";
             _generateAbilities();
             
-        }  
+        }
         // PRIVATE METHODS===================================================================
+        
+        /**
+         * <summary>
+         * This Method generate hero's strength, speed and health between 1 and 100 using a random number generator.
+         * </summary>
+         * 
+         * @Method _generateAbilities
+         * @returns {void}
+         */
         private void _generateAbilities()
         {
 
             _strength = random.Next(1,100);
             _speed = random.Next(1,100);
-            _health = random.Next(1,100);
-
-            
+            _health = random.Next(1,100);     
         }
 
+        /**
+         * <summary>
+         * This Method randomly determine if the Hero hits
+         * </summary>
+         * 
+         * @Method _hitAttempt
+         * @returns {bool}
+         */
         private bool _hitAttempt()
         {
             bool hit = false;
@@ -75,10 +90,16 @@ namespace Assignment_1
                 hit = true;
             }
             return hit;
-
-
         }
 
+        /**
+         * <summary>
+         * This Method calculates the damage the Hero causes to the target on a hit.
+         * FinDam = _strength * DamMult
+         * FinDam is the final damage Hero will cause to the target.
+         * DamMult is ramdomly generated between 1 and 6. 
+         * </summary>
+         */
         private int _hitDamage()
         {
             int DamMult = random.Next(1,6);
@@ -88,6 +109,15 @@ namespace Assignment_1
         }
 
         //PUBLIC METHODS====================================================================
+
+        /**
+        * <summary>
+        * This method outputs the _hitDamage value to the console.
+        * </summary>
+        * 
+        * @method Fight
+        * @returns {void}
+        */
         public void Fight()
         {
             bool hit = _hitAttempt();
@@ -97,8 +127,20 @@ namespace Assignment_1
                 
                 Console.WriteLine(this.Name+" Deals "+_hitDamage()+" Damage");
             }
-            
+            else
+            {
+                Console.WriteLine(this.Name+" Missed");
+            }
         }
+
+        /**
+        * <summary>
+        * This method outputs the _strength, _speed, _health value to the console.
+        * </summary>
+        * 
+        * @method Show
+        * @returns {void}
+        */
         public void Show()
         {
             Console.WriteLine(this.Name+" Strength = "+_strength+" Speed = "+_speed+" Health = "+_health);
