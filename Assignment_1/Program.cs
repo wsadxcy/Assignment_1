@@ -8,7 +8,12 @@ using System.Threading.Tasks;
  * Date : June 2th, 2016
  * Date Modified: Jun 3th, 2016
  * Description : Assignment 1
- * Version : 0.0.5 - Added Documentation for everything.
+ * Version : 0.0.6 - Added Unit Test for : 
+                                        _generateAbilities Method;
+                                        _hitAttempt Method;
+                                        _hitDamage Method;
+                                        Fight Method;
+                                        Show Method;
  */
 namespace Assignment_1
 {
